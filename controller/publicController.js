@@ -33,7 +33,7 @@ export const applyAsCoach = async (req, res) => {
 
   const existing = await Coach.findOne({ email });
   if (existing) {
-    throw new BadRequestError("Coach with this email already exists.");
+    throw new BadRequestError("Coach with this email already exists");
   }
 
   const imageUrl = req.files.image[0].location;
